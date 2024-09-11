@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Poppins-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Poppins-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Poppins-Bold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/DMSans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/DMSans-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --primary: #fa1f60;
+  --dark: #0d0f23;
+  --secondary: #fff;
+  --bg: #111536;
+  --default-radius: 1rem;
+  --border-color: #28007a;
+  --text-secondary: #787878;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary);
+  line-height: 24px;
+}
+.button {
+  color: var(--secondary);
+  padding: 0.25rem 0.5rem;
+  border-radius: calc(var(--default-radius) * 2);
+  text-decoration: none;
+  text-align: center;
+}
+.button-primary {
+  background-color: var(--primary);
+}
+.button-secondary-outline {
+  background-color: transparent;
+  border: 2px solid var(--secondary);
+}
+.section-title {
+  font-size: 1.25rem;
+  line-height: 32px;
+}
+
+.app-wrapper {
+  display: flex;
+  background-color: var(--dark);
+  max-width: 1440px;
+  margin: 1rem auto;
+}
+
+.aside-navigation {
+  background-color: var(--bg);
+  padding: 0 1.5rem;
+}
+.aside-navigation__list {
+  list-style-type: none;
+  padding: 68px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+}
+.aside-navigation__list .aside-navigation__link {
+  display: block;
+}
+.aside-navigation__list .aside-navigation__link:hover {
+  filter: brightness(1.3);
+}
+
+.main {
+  flex-grow: 1;
+  padding-top: 56px;
+  padding-inline: 56px;
+}
+.intro-wrapper {
+  display: flex;
+  max-height: 200px;
+}
+.intro-content,
+.intro-bunner {
+  width: 50%;
+}
+.intro-content {
+  border: 2px solid var(--border-color);
+  border-radius: var(--default-radius) 0 0 var(--default-radius);
+  padding: 2rem;
+  background: linear-gradient(to top, #161a4200, #161a42);
+  border-right: none;
+}
+.intro-content__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.intro-content__text {
+  color: #6c71ad;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.intro-content__buttons .button {
+  margin-right: 1.25rem;
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+}
+.intro-content__buttons .buttons:first-child {
+  box-shadow: 6px 10px 16px 0 #5b5bf63c;
+  border: 2px solid var(--primary);
+}
+
+.intro-bunner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#friends {
+  margin-top: 27px;
+}
+
+#friends .section-title {
+  margin-bottom: 1.25rem;
+}
+.friends-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.friend-card {
+  display: flex;
+}
+.friend-card__avatar img {
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.friend-card__nickname {
+  font-weight: 700;
+}
+.friend-card__prophecy {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+.friends-progress {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary) 0% 15%, #a19d9f 15%);
+  border-radius: var(--default-radius);
+}
+
+#projects {
+  margin-top: 34px;
+}
+#projects .section-title {
+  margin-bottom: 14px;
+}
+.projects-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects-title-wrapper__link {
+  color: #7d80a5;
+  text-decoration: none;
+  font-weight: 500;
+}
+.projects-items {
+  display: flex;
+  justify-content: space-between;
+}
+.projects-card {
+  border-radius: var(--default-radius);
+  background-color: #1b214f;
+  padding: 12px;
+  padding-bottom: 20px;
+}
+.project-card__images {
+  position: relative;
+}
+.project-card__images img {
+  border-radius: var(--default-radius);
+}
+.project-card__avatar {
+  position: absolute;
+  bottom: -15px;
+  right: 15px;
+}
+.project-card__title {
+  margin-top: 14px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.project-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+.project-card__footer a {
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 27px;
+  padding: 0 2.5rem;
+}
+
+.aside-employee {
+  background: #111536;
+  padding: 40px 20px;
+  font-family: "DM sans", sans-serif;
+}
+.employee-header span {
+  font-weight: 500;
+}
+.header-person {
+  margin-bottom: 27px;
+}
+.header-person img {
+  margin-right: 9px;
+}
+.employee-info__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px 0;
+}
+.employee-info__details span {
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+.employee-info__details button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.emplouee-info__block-image {
+  text-align: center;
+}
+.employee-info__image {
+  border-radius: 12px;
+  margin-inline: auto;
+  margin-bottom: 65px;
+}
+.employee-info-job__title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.employee-info-job__experience {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+.employee-info-job-place {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 36px;
+}
+.employee-info-job-place__title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-left: 12px;
+}
+.employee-info-job-place .button {
+  margin-left: auto;
+  line-height: 25px;
+  padding: 0 0.85rem;
+}
+.employee-footer {
+  padding-inline: 27px;
+}
+.employee-footer .button {
+  display: block;
+  padding-block: 0.75rem;
+}
+.employee-info-about {
+}
+.employee-info-about__title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.employee-info-about__text {
+  margin-bottom: 40px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  max-width: 312px;
+}
